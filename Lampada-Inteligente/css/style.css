@@ -76,6 +76,12 @@ button{
     width: 40px !important;
     height: 40px !important;
     border-radius: 50%;
+    transition: background-color 0.3s
+}
+
+.recording{
+    background-color: red;
+    color: white;
 }
 
 .speakRec:hover{

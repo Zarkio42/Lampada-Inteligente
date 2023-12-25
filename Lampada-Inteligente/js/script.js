@@ -3,7 +3,7 @@ var clickOnImage = 0;
 
 lampada.addEventListener("click", function () {
     clickOnImage++
-    if (clickOnImage === 3) {
+    if (clickOnImage === 3 && lampada.src != "./images/quebrada.png") {
         lampada.src = "./images/quebrada.png"
         lampada.style = "width: 700px;"
         alert("Você quebrou a lâmpada :(")
@@ -27,8 +27,8 @@ function trocaImg(v) {
 }
 
 var speechOnOff = false;
-const listAcender = ["acender", "acender lâmpada", "acenda", "ligar", "ligar luz", "acender luz", "ligar lâmpada", "liga", "acende"];
-const listApagar = ["apagar", "apagar luz", "desligar", "apagar lâmpada", "desligar luz", "desligar lâmpada", "desliga", "apaga"];
+const listAcender = ["acender", "liga", "ligar", "acender luz"];
+const listApagar = ["apagar", "apaga", "apagar lâmpada"];
 
 class speechApi {
     constructor() {
@@ -39,12 +39,13 @@ class speechApi {
 
         this.speechApi.onresult = (e) => {
             var resultIndex = e.resultIndex;
-            var transcript = e.results[resultIndex][0].transcript.toLowerCase();
+            var transcript = e.results[resultIndex][0].transcript.toLowerCase().trim();
             console.log("Você disse:", transcript);
 
-            if ( listAcender.some(p => transcript.includes(p))) {
+            if (listAcender.some(p => transcript.includes(p))) {
                 trocaImg(1);
-            } else if (listApagar.some(p => transcript.includes(p))) {
+            }
+            else if (listApagar.some(p => transcript.includes(p))) {
                 trocaImg(0);
             }
         };
@@ -65,10 +66,13 @@ class speechApi {
 const speechApiInstance = new speechApi();
 
 function startAndStop() {
+    let btnColor = document.getElementById("speaker");
     if (speechOnOff) {
         speechApiInstance.stop();
+        btnColor.classList.remove('recording');
     } else {
         speechApiInstance.start();
+        btnColor.classList.add('recording');
     }
 }
 
