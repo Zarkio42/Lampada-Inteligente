@@ -17,7 +17,9 @@
 <body>
 
     <div class="container box">
-        <img src="./images/apagado.png" alt="lâmpada apagada" class="lampada" id="img-lamp" style="width: 700px;">
+        <div class="container d-flex justify-content-center">
+            <img src="./images/apagado.png" alt="lâmpada apagada" class="lampada" id="img-lamp" style="width: 700px;">
+        </div>
         <div class="buttons-box">
             <div class="details-box">
                 <div class="details" id="detail-01" style="background-color: red;"></div>
@@ -25,7 +27,8 @@
                 <div class="details"></div>
             </div>
             <button class="ligarBtn" id="onBtn" onclick="trocaImg(1)">Ligar</button>
-            <button class="speakRec" id="speaker" onclick="startAndStop()"><i class="bi bi-mic" style="display: flex; justify-content: center;"></i></button>
+            <button class="speakRec" id="speaker" onclick="startAndStop()"><i class="bi bi-mic"
+                    style="display: flex; justify-content: center;"></i></button>
             <button class="desligarBtn" id="offBtn" onclick="trocaImg(0)">Desligar</button>
         </div>
     </div>
