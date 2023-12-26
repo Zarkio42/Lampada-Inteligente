@@ -49,6 +49,14 @@ class speechApi {
                 trocaImg(0);
             }
         };
+
+        this.speechApi.onend = () => {
+            if (speechOnOff) {
+                setTimeout(() => {
+                    this.start();
+                }, 500);
+            }
+        };
     }
 
     start() {
