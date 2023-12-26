@@ -13,7 +13,7 @@ body{
 
 .buttons-box{
     display: flex;
-    width: 40%;
+    width: 55%;
     justify-content: space-evenly;
     background-color: #303030;
     border-radius: 20px;
@@ -95,87 +95,41 @@ button{
     background-color: #cbcbcb;
 }
 
-@media only screen and (min-width: 1000px) and (max-width: 1339px) {
+@media only screen and (max-width: 1199px){
     button{
-        width: 55px;
-        height: 55px;
+        width: 75px;
+        height: 75px;
         border-radius: 50%;
         border: none;
     }
     .speakRec{
-        width: 30px !important;
-        height: 30px !important;
+        width: 35px !important;
+        height: 35px !important;
         border-radius: 50%;
         transition: background-color 0.3s
     }
     .desligarBtn{
         background-color: rgb(255, 0, 0);
-        font-size: 8pt;
+        font-size: 12pt;
         color: #fff;
         font-weight: 700;
     }
     .desligarBtn:hover,.desligarBtn:focus{
         background-color: rgb(155, 0, 0);
-        font-size: 8pt;
+        font-size: 12pt;
         color: #fff;
         font-weight: 700;
     }
     .ligarBtn{
         background-color: rgb(0, 255, 0);
-        font-size: 11pt;
+        font-size: 12pt;
         color: #fff;
         font-weight: 700;
     
     }
     .ligarBtn:hover, .ligarBtn:focus{
         background-color: rgb(1, 175, 1);
-        font-size: 11pt;
-        color: #fff;
-        font-weight: 700;
-    }
-    .details{
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: #737373;
-    }
-}
-
-@media only screen and (max-width: 992px){
-    button{
-        width: 55px;
-        height: 55px;
-        border-radius: 50%;
-        border: none;
-    }
-    .speakRec{
-        width: 30px !important;
-        height: 30px !important;
-        border-radius: 50%;
-        transition: background-color 0.3s
-    }
-    .desligarBtn{
-        background-color: rgb(255, 0, 0);
-        font-size: 8pt;
-        color: #fff;
-        font-weight: 700;
-    }
-    .desligarBtn:hover,.desligarBtn:focus{
-        background-color: rgb(155, 0, 0);
-        font-size: 8pt;
-        color: #fff;
-        font-weight: 700;
-    }
-    .ligarBtn{
-        background-color: rgb(0, 255, 0);
-        font-size: 11pt;
-        color: #fff;
-        font-weight: 700;
-    
-    }
-    .ligarBtn:hover, .ligarBtn:focus{
-        background-color: rgb(1, 175, 1);
-        font-size: 11pt;
+        font-size: 12pt;
         color: #fff;
         font-weight: 700;
     }
@@ -193,7 +147,8 @@ button{
     }
     .buttons-box{
         display: flex;
-        width: 90%;
+        width: 80%;
+        height: auto;
         justify-content: space-evenly;
         background-color: #303030;
         border-radius: 20px;
@@ -207,41 +162,41 @@ button{
     }
 }
 
-@media only screen and (max-width: 419px){
+@media only screen and (max-width: 768px){
     button{
-        width: 45px;
-        height: 45px;
+        width: 75px;
+        height: 75px;
         border-radius: 50%;
         border: none;
     }
     .speakRec{
-        width: 25px !important;
-        height: 25px !important;
+        width: 35px !important;
+        height: 35px !important;
         border-radius: 50%;
         transition: background-color 0.3s
     }
     .desligarBtn{
         background-color: rgb(255, 0, 0);
-        font-size: 6pt;
+        font-size: 12pt;
         color: #fff;
         font-weight: 700;
     }
     .desligarBtn:hover,.desligarBtn:focus{
         background-color: rgb(155, 0, 0);
-        font-size: 6pt;
+        font-size: 12pt;
         color: #fff;
         font-weight: 600;
     }
     .ligarBtn{
         background-color: rgb(0, 255, 0);
-        font-size: 11pt;
+        font-size: 12pt;
         color: #fff;
-        font-weight: 600;
+        font-weight: 700;
     
     }
     .ligarBtn:hover, .ligarBtn:focus{
         background-color: rgb(1, 175, 1);
-        font-size: 11pt;
+        font-size: 12pt;
         color: #fff;
         font-weight: 700;
     }
@@ -258,8 +213,11 @@ button{
         position: relative;
     }
     .buttons-box{
-        display: flex;
-        width: 100%;
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+        gap: 25px;
+        width: 80%;
         justify-content: space-evenly;
         background-color: #303030;
         border-radius: 20px;
