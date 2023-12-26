@@ -1,5 +1,7 @@
 body{
     background-color: #100a04;
+    display: flex;
+    justify-content: center;
 }
 
 .box{
@@ -86,4 +88,119 @@ button{
 
 .speakRec:hover{
     background-color: #cbcbcb;
+}
+
+@media only screen and (max-width: 1399px) {
+    button{
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        border: none;
+    }
+    .speakRec{
+        width: 30px !important;
+        height: 30px !important;
+        border-radius: 50%;
+        transition: background-color 0.3s
+    }
+    .desligarBtn{
+        background-color: rgb(255, 0, 0);
+        font-size: 8pt;
+        color: #fff;
+        font-weight: 700;
+    }
+    .desligarBtn:hover,.desligarBtn:focus{
+        background-color: rgb(155, 0, 0);
+        font-size: 8pt;
+        color: #fff;
+        font-weight: 700;
+    }
+    .ligarBtn{
+        background-color: rgb(0, 255, 0);
+        font-size: 11pt;
+        color: #fff;
+        font-weight: 700;
+    
+    }
+    .ligarBtn:hover, .ligarBtn:focus{
+        background-color: rgb(1, 175, 1);
+        font-size: 11pt;
+        color: #fff;
+        font-weight: 700;
+    }
+    .details{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #737373;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    button{
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        border: none;
+    }
+    .speakRec{
+        width: 30px !important;
+        height: 30px !important;
+        border-radius: 50%;
+        transition: background-color 0.3s
+    }
+    .desligarBtn{
+        background-color: rgb(255, 0, 0);
+        font-size: 8pt;
+        color: #fff;
+        font-weight: 700;
+    }
+    .desligarBtn:hover,.desligarBtn:focus{
+        background-color: rgb(155, 0, 0);
+        font-size: 8pt;
+        color: #fff;
+        font-weight: 700;
+    }
+    .ligarBtn{
+        background-color: rgb(0, 255, 0);
+        font-size: 11pt;
+        color: #fff;
+        font-weight: 700;
+    
+    }
+    .ligarBtn:hover, .ligarBtn:focus{
+        background-color: rgb(1, 175, 1);
+        font-size: 11pt;
+        color: #fff;
+        font-weight: 700;
+    }
+    .details{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #737373;
+    }
+    .box{
+        display: grid;
+        justify-items: center;
+        width: 100%;
+        position: relative;
+    }
+    .buttons-box{
+        display: flex;
+        width: 90%;
+        justify-content: space-evenly;
+        background-color: #303030;
+        border-radius: 20px;
+        padding: 20px;
+        position: relative;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    .lampada{
+        width: 405px !important;
+    }
+    .recording{
+        background-color: red !important;
+        color: white;
+    }
 }

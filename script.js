@@ -27,8 +27,8 @@ function trocaImg(v) {
 }
 
 var speechOnOff = false;
-const listAcender = ["acender", "liga", "ligar", "acender luz"];
-const listApagar = ["apagar", "apaga", "apagar lâmpada"];
+const listAcender = ["acender", "liga", "ligar", "acenda", "ligue"];
+const listApagar = ["apagar", "apaga", "apagar lâmpada", "apague"];
 
 class speechApi {
     constructor() {
