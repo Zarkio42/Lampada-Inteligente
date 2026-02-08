@@ -3,47 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Lamp AI</title>
+    <title>Smart Lamp 2.0</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
-    <button id="theme-toggle" class="theme-btn" aria-label="Alternar Tema">
+    <button id="btn-tema" class="btn-tema" aria-label="Alternar Tema">
         <i class="bi bi-moon-stars-fill"></i>
     </button>
 
     <main class="container">
-        <div class="lamp-container">
-            <div class="glow-effect" id="glow"></div>
-            <img src="./images/apagado.png" alt="Lâmpada Inteligente" class="lamp-img" id="img-lamp">
+        
+        <div class="palco-lampada">
+            <div class="brilho-ambiente" id="brilho"></div>
+            <img src="./images/apagado.png" alt="Lâmpada Inteligente" class="lampada" id="img-lamp">
         </div>
 
-        <div class="subtitle-box">
-            <p id="subtitle">Aguardando comando...</p>
-        </div>
-
-        <div class="control-panel">
-            <div class="status-indicator">
-                <span id="status-dot" class="dot"></span>
-                <span id="status-text">Desligado</span>
+        <div class="painel">
+            <div class="feedback-container">
+                <p id="legenda" class="texto-digitando">Aguardando comando...</p>
             </div>
 
-            <div class="buttons-grid">
-                <button class="btn btn-on" onclick="smartHome.command('ligar')">
-                    <i class="bi bi-power"></i> Ligar
+            <div class="status-badge">
+                <span id="ponto-status" class="status-dot"></span>
+                <span id="texto-status">DESLIGADO</span>
+            </div>
+
+            <div class="controles">
+                <button class="btn btn-acao ligar" onclick="app.comando('ligar')">
+                    <i class="bi bi-power"></i>
                 </button>
                 
-                <button class="btn btn-mic" id="mic-btn" onclick="smartHome.toggleSpeech()">
+                <button class="btn btn-mic" id="btn-mic" onclick="app.alternarReconhecimento()">
                     <i class="bi bi-mic-fill"></i>
                 </button>
                 
-                <button class="btn btn-off" onclick="smartHome.command('desligar')">
-                    <i class="bi bi-power"></i> Desligar
+                <button class="btn btn-acao desligar" onclick="app.comando('desligar')">
+                    <i class="bi bi-power"></i>
                 </button>
             </div>
             
-            <small class="hint">Tente: "Luz Azul", "Meia Luz", "Explodir"</small>
+            <p class="dica">Tente: "Luz Azul", "Modo Festa", "Explodir"</p>
         </div>
     </main>
 
