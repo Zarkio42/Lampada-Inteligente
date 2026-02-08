@@ -83,9 +83,3 @@ function startAndStop() {
         btnColor.classList.add('recording');
     }
 }
-
-
-
-
-
-
